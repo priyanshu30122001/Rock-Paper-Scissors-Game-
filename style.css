@@ -179,6 +179,7 @@ li::marker{
     box-shadow: -1px 1px 11px 0px rgba(0, 0, 0, 0.35);
     border: 16px solid rgba(0, 116, 182, 1);
     border-radius: 100%;
+    animation: winner 1s ease forwards;
 
 }
 .first-line{
@@ -243,6 +244,7 @@ li::marker{
     padding: 4rem 0 4rem;
     text-align:center;
     padding-bottom: 5vh;
+    z-index: 1;
 }
 .pc{
     grid-column-start: 3;
@@ -303,6 +305,7 @@ li::marker{
     text-align: center;
     margin: 0;
 }
+
 /* ---------------------------------------winner result page--------------------------------------------- */
 .winner_result{
     display: flex;
