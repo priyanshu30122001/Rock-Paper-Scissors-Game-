@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <div class="left_section">ROCK <br> PAPER <br> SCISSORS</div>
+            <div class="right_section">
+                <div class="computer_score" id="computerScore">COMPUTER <br> SCORE <br><span>0</span></div>
+                <div class="your_score" id="yourScore">YOUR <br> SCORE <br><span>0</span></div>
+            </div>
+        </div>
+    </header>
+    
+ 
+    <section class="triangle-section" id="gameSection">
+        <div >
+            <div class="first-line ">
+                 <button class="turn rock " onclick="functionToExecute(this.id)" id="rock"><img src="images/icons8-fist-67 1.svg" alt=""></button>
+                 <div class="line">	&nbsp </div>
+                 <button class="turn scissors " onclick="functionToExecute(this.id)" id="scissors"><img src="images/17911 1.svg" alt=""></button>
+            </div>
+            <div class="second-line">
+                <div class="diagonal a">	&nbsp </div>
+                <div class="diagonal b">	&nbsp </div>    
+            </div>
+            <div class="third-line">
+                <button class="turn paper " onclick="functionToExecute(this.id)" id="paper"><img src="images/icons8-hand-64 1.svg" alt=""></button>        
+            </div>
+        </div>
+    </section>
+    <section class="results hidden">
+        
+        <h2 class="results_heading you">YOU PICKED</h2>
+        <h2 class="results_heading pc">PC PICKED</h2>
+        <div class="player"><button class="turn" id="playerBanner"><img src="" alt="error" id="player"></button>  </div>
+        <div class="winner">
+           <h3 class="result_text" id="result_text"></h3>
+           <h2 class="against " id="against">AGAINST PC</h2>
+           <button class="play-again" id="playagain">PLAY AGAIN</button>
+        </div>
+        <div class="computer"><button class="turn" id="computerBanner" ><img src="" alt="error" id="computer"></button>  </div>
+
+    
+    </section>
+    <section>
+        <button class="next" id="next">NEXT</button>
+        <button class="pop-up" onclick="displayRules()" id="pop-up">RULES</button>
+        <div class="Rules" id="Rules">
+           <button class="minimize" onclick="minimize()" > <span>X</span> </button>
+           <p>Game Rules</p>
+           <ul>
+               <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+               <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+               <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+               <li>If both players lay down the same hand, each player lays down another hand</li>
+           </ul>
+        </div>
+       </section>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
