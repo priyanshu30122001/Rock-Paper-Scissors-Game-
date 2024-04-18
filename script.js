@@ -1,8 +1,15 @@
   // Display and hide the rule 
   var pcChoice = '';
-  const nextButton = document.getElementById("next");     
+  const nextButton = document.getElementById("next"); 
+  const ruleButton = document.getElementById("pop-up");    
   const ruleBoard = document.getElementById("Rules");
   var button = document.getElementById('playagain'); 
+  const playerScore = document.getElementById('yourScore');
+  const computerScore = document.getElementById('computerScore');
+  const resetGame =document.getElementById('reset');
+
+  var p = 0;
+  var pc =0;
 
   
   function displayRules(){
@@ -21,9 +28,6 @@
       return Math.floor(Math.random() * Math.floor(max));
       }
       
-
-
-
   function functionToExecute(id) {
 
       const playerChoice = id;
@@ -37,23 +41,45 @@
       if (playerChoice === pcChoice) {
            console.log("Draw");
            winner.innerText="TIE UP";
-
+           button.innerText='REPLAY';
+        //    changeScore();  
            return "It's a tie!";
       }
       else if ((playerChoice === "rock" && pcChoice === "scissors") ||
                (playerChoice === "paper" && pcChoice === "rock") ||
                (playerChoice === "scissors" && pcChoice === "paper")) {
+                
+          addNextbutton();
           console.log("you win !!");
           winner.innerText="YOU WIN";
+          button.innerText= "PLAY AGAIN";
+          p++;
+          changeScore();
           return "You win!";
+    
       } 
       else {
           console.log("PC win !!!");
           winner.innerText="YOU LOST";
+          button.innerText= "PLAY AGAIN";
+          pc++;
+          changeScore();
           return "Computer wins!";
 
       }   
 
+  }
+  function changeScore(){
+    // console.log(playerScore.innerText);
+    // console.log(computerScore.innerText);
+    playerScore.innerText=p;
+    computerScore.innerText=pc;
+  }
+  function addNextbutton(){
+    ruleButton.style.right="12rem"; 
+    nextButton.style.visibility=("visible");
+    nextButton.style.right="3rem";
+   
   }
   //function player card
   function playerbanner(playerChoice){
@@ -103,7 +129,7 @@
       playerbanner(playerChoice);
       computerTurn();
      
-      nextButton.style.visibility=("visible"); 
+      
       // const change = document.getElementById('pop-up');
 
   }
@@ -113,8 +139,33 @@
       document.querySelector(".triangle-section").classList.toggle("hidden");
       document.querySelector(".results").classList.toggle("hidden");
       nextButton.style.visibility=("hidden");
+      ruleButton.style.right="3rem";
 
     },500)
   });
+
+  nextButton.addEventListener('click', () => {
+    document.querySelector(".winner_result").classList.toggle("hidden");
+    document.querySelector(".results").classList.toggle("hidden");
+    document.querySelector("header").classList.toggle("hidden");
+    nextButton.style.visibility=("hidden");
+    ruleButton.style.right="3rem";
+    const winner = document.getElementById('winner');
+    const heading = document.getElementById('heading');
+          if(p == pc){
+            heading.innerText="DRAW!!";
+            winner.innerText="";
+          }
+          else if(pc>p){
+            heading.innerText=" ";
+            winner.innerText="COMPUTER WON THE GAME";
+          }
+          else{
+            heading.innerText="HURRAY!! ";
+            winner.innerText="YOU WON THE GAME";
+          }
+  });
+
+  
       
 
