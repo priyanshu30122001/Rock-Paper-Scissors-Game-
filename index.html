@@ -14,8 +14,8 @@
         <div class="banner">
             <div class="left_section">ROCK <br> PAPER <br> SCISSORS</div>
             <div class="right_section">
-                <div class="computer_score" id="computerScore">COMPUTER <br> SCORE <br><span>0</span></div>
-                <div class="your_score" id="yourScore">YOUR <br> SCORE <br><span>0</span></div>
+                <div class="computer_score" >COMPUTER <br> SCORE <br><span id="computerScore">0</span></div>
+                <div class="your_score" >YOUR <br> SCORE <br><span id="yourScore">0</span></div>
             </div>
         </div>
     </header>
@@ -65,7 +65,18 @@
            </ul>
         </div>
        </section>
- 
+    <section class="winner_result hidden">
+        <div>
+           <img class="Star" src="images/Star.svg" alt="error">
+           <img class="trophy" src="images/trophy.svg" alt="error">
+        </div>
+        <div class="container">
+           <h1 id="heading"></h1>
+           <h2 id="winner"> </h2>
+           <button class="reset" id="reset">PLAY AGAIN</button>
+        </div>
+
+   </section>
     <script src="script.js"></script>
 </body>
 </html>
