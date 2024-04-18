@@ -68,7 +68,10 @@ body{
     line-height: 24.61px;
     text-align: center;
     border-radius: 10px;
-    padding: 0.8vh 1.2vw;
+    padding: 0.8vh 2vw;
+    position: absolute;
+    bottom: 2rem;
+    
     
 }
 .pop-up{
@@ -83,7 +86,7 @@ body{
     line-height: 24.61px;
     text-align: center;
     border-radius: 10px;
-    padding: 0.8vh 1.2vw;
+    padding: 0.8vh 1.5vw;
     position: absolute;
     bottom: 2rem;
     right: 2rem;
@@ -283,7 +286,7 @@ li::marker{
     text-align: center;
     font-family: Roboto;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 17.58px;
     padding: 1em 3em;
     color: rgba(107, 107, 107, 1);
@@ -299,4 +302,67 @@ li::marker{
     line-height: 45.7px;
     text-align: center;
     margin: 0;
+}
+/* ---------------------------------------winner result page--------------------------------------------- */
+.winner_result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5vh auto 0;
+}
+.star{
+  position: absolute;
+  top: 10vh;
+
+}
+.trophy{
+ position: absolute;
+ top:25vh;
+ right:43%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: Roboto;
+  margin-top: 5vh;
+  margin-left: 2vw;
+}
+.container h1{
+  
+  font-family: Roboto;
+  font-size: 91px;
+  font-weight: 600;
+  line-height: 106.64px;
+  text-align: center;
+  margin: 0.5vh 0;
+
+}
+.container h2{
+  font-family: Roboto;
+  font-size: 41px;
+  font-weight: 600;
+  line-height: 48.05px;
+  text-align: center;
+  margin: 0.5vh 0;
+
+}
+.reset{
+margin-top: 5vh;
+text-align: center;
+font-family: Roboto;
+font-size: 15px;
+font-weight: 600;
+line-height: 17.58px;
+padding: 1em 3em;
+color: rgba(107, 107, 107, 1);
+background-color: rgba(255, 255, 255, 1);
+border: none;
+border-radius: 9px;
+cursor: pointer;
+}
+.hidden{
+    display: none;
 }
